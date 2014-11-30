@@ -1,0 +1,99 @@
+div {
+border:2px solid orange;
+width:300px;
+padding:10px;
+display:block;
+
+}
+
+.nav{ width:962px; height:42px; background-color:#080808; margin:0px auto}
+.nav ul{ width:100%; height:auto}
+.nav ul li { width:auto; height: auto; float:left; font-family:"Ebrima"; font-size:16px; color: #FFF; padding:13px 15px; text-align:center}
+.nav ul li a{ color:#FFF}
+.nav ul li a:hover{ color:#80b9e0}
+.nav ul li:hover{ background-color:#2c2d31}
+/******************************/
+.menu, .menu ul {list-style: none;padding: 0;}
+.menu ul {margin: 0;}
+.menu > li {position: relative;display: inline-block;outline: 0;}
+.submenu {position: absolute;left: 0;top: 100%;z-index:5000;overflow: hidden;max-height: 0;
+/* The transition-delay prevents the menu to disappear before the transition is run backward
+* It's ~= length of the animation (.6s) + highest item transition delay (466ms) */
+-webkit-transition: max-height 1ms linear 1s;
+-moz-transition: max-height 1ms linear 1s;
+/* A .submenu should be only revealed when hovering the .menu */pointer-events: none;}
+.menu > li:hover .submenu, .menu > li:focus .submenu {pointer-events: auto;
+z-index:5000;max-height: 2000px;-webkit-transition: none;-moz-transition: none;}
+/* Progressive Anim*/
+/* forward */
+.menu > li:hover .submenu li:nth-child(1) {
+-webkit-transition-delay: 0s;
+-moz-transition-delay: 0s;
+-ms-transition-delay: 0s;
+-o-transition-delay: 0s;
+transition-delay: 0s;
+}
+
+.menu > li:hover .submenu li:nth-child(2) {
+-webkit-transition-delay: 66ms;
+-moz-transition-delay: 66ms;
+-ms-transition-delay: 66ms;
+-o-transition-delay: 66ms;
+transition-delay: 66ms;
+}
+
+.menu > li:hover .submenu li:nth-child(3) {
+-webkit-transition-delay: 133ms;
+-moz-transition-delay: 133ms;
+-ms-transition-delay: 133ms;
+-o-transition-delay: 133ms;
+transition-delay: 133ms;
+}
+/* backward */
+.submenu li:nth-child(1) {
+-webkit-transition-delay: 466ms;
+-moz-transition-delay: 466ms;
+-ms-transition-delay: 466ms;
+-o-transition-delay: 466ms;
+transition-delay: 466ms;
+}
+
+.submenu li:nth-child(2) {
+-webkit-transition-delay: 400ms;
+-moz-transition-delay: 400ms;
+-ms-transition-delay: 400ms;
+-o-transition-delay: 400ms;
+transition-delay: 400ms;
+}
+
+.submenu li:nth-child(3) {
+-webkit-transition-delay: 333ms;
+-moz-transition-delay: 333ms;
+-ms-transition-delay: 333ms;
+-o-transition-delay: 333ms;
+transition-delay: 333ms;
+}
+/* Default */
+.submenu li {
+opacity: 0;
+-webkit-transition: opacity .4s, -webkit-transform .6s, max-height .6s;
+-moz-transition: opacity .4s,    -moz-transform .6s, max-height .6s;
+-ms-transition: opacity .4s,     -ms-transform .6s, max-height .6s;
+-o-transition: opacity .4s,      -o-transform .6s, max-height .6s;
+transition: opacity .4s,         transform .6s, max-height .6s;
+background-color:#080808;}
+
+.menu > li:hover .submenu li, .menu > li:focus .submenu li {opacity: 1;-webkit-transform: none;-moz-transform: none;-ms-transform: none;-o-transform: none;transform: none;}
+/* Wave */
+.wave li {
+  -webkit-transform-origin: 0% 0%;
+     -moz-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+       -o-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: skewY(-90deg);
+     -moz-transform: skewY(-90deg);
+      -ms-transform: skewY(-90deg);
+       -o-transform: skewY(-90deg);
+          transform: skewY(-90deg);
+}
